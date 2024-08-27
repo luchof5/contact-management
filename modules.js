@@ -17,7 +17,27 @@ const readContacts = () => {
 };
 
 // Agrega contactos
-const addContact = () => {};
+const addContact = (name, ph, mail) => {
+  const num = Number(ph);
+  if (name.length < 3 || isNaN(num) || !mail.includes("@")) {
+    return "Dato incorrecto";
+  }
+
+  const contactsList = readContacts();
+
+  const constact = {
+    id: randomUUID(),
+    nombre: name,
+    telfono: ph,
+    email: mail,
+  };
+
+  contactsList.push(constact);
+
+  fs.writeFileSync(URL_FILE, JSON.stringify(contactsList));
+
+  return constact;
+};
 
 // Elimina contacto
 const deleteContact = () => {};

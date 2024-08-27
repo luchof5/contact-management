@@ -10,5 +10,11 @@
         "nombre": "María García",
         "telefono": "+1-555-987-6543",
         "email": "maria.garcia@example.com"
+    },
+    {
+        "id": "6d80d07e-6c2c-46a0-b72c-643fe9d70da5",
+        "nombre": "lucho",
+        "telfono": "22222",
+        "email": "lucho@lucho.com"
     }
 ]
