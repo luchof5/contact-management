@@ -1,20 +1,14 @@
 [
     {
-        "id": 1,
-        "nombre": "Juan Pérez",
-        "telefono": "+1-555-123-4567",
-        "email": "juan.perez@example.com"
-    },
-    {
-        "id": 2,
-        "nombre": "María García",
-        "telefono": "+1-555-987-6543",
-        "email": "maria.garcia@example.com"
-    },
-    {
-        "id": "6d80d07e-6c2c-46a0-b72c-643fe9d70da5",
+        "id": "8ae34e47-4c85-4f8a-8dc2-0531820cd1f5",
         "nombre": "lucho",
-        "telfono": "22222",
+        "telfono": "123456789",
         "email": "lucho@lucho.com"
+    },
+    {
+        "id": "f3eda6bc-8191-4c4b-ac7c-ce73c54c6b36",
+        "nombre": "luis",
+        "telfono": "234567890",
+        "email": "luis@luis.com"
     }
 ]

@@ -40,6 +40,24 @@ const addContact = (name, ph, mail) => {
 };
 
 // Elimina contacto
-const deleteContact = () => {};
+const deleteContact = (id) => {
+  if (!id) {
+    return "ID is required";
+  }
+
+  const contactsList = readContacts();
+
+  const foundContact = contactsList.find((contact) => contact.id === id);
+
+  if (!foundContact) {
+    return "Contact not found";
+  }
+
+  const newContactList = contactsList.filter((contact) => contact.id !== id);
+
+  fs.writeFileSync(URL_FILE, JSON.stringify(newContactList));
+
+  return foundContact;
+};
 
 export { readContacts, addContact, deleteContact };
