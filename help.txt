@@ -1,0 +1,29 @@
+Uso de la aplicación de contactos:
+
+Comandos disponibles:
+
+1. **help**: Muestra esta ayuda.
+   Ejemplo: `node app.js help`
+
+2. **list**: Lista los contactos. 
+   Puedes especificar un criterio de búsqueda.
+   Ejemplo: `node app.js list "criterio"`
+
+3. **add**: Agrega un nuevo contacto.
+   Necesita cuatro argumentos:
+   - Nombre del contacto
+   - Número de teléfono
+   - Correo electrónico
+   - (Opcional) Indica si el contacto es favorito con "favoritos"
+   Ejemplo: `node app.js add "Juan Pérez" "123456789" "juan@example.com" "favoritos"`
+
+4. **delete**: Elimina un contacto existente.
+   Necesita el ID del contacto a eliminar.
+   Ejemplo: `node app.js delete "id_del_contacto"`
+
+Ejemplos:
+- Para listar todos los contactos: `node app.js list`
+- Para agregar un contacto: `node app.js add "Ana García" "987654321" "ana@example.com"`
+- Para eliminar un contacto: `node app.js delete "12345678"`
+
+Si recibe un mensaje de error sobre argumentos inválidos, asegúrese de que está utilizando los comandos correctos y proporcionando los argumentos necesarios.

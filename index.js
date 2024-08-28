@@ -1,8 +1,15 @@
-import { readContacts, addContact, deleteContact } from "./modules.js";
+import {
+  helpRead,
+  readContacts,
+  addContact,
+  deleteContact,
+} from "./modules.js";
 
 const args = process.argv.splice(2);
 
-if (args[0] === "list") {
+if (args[0] === "help") {
+  console.log(helpRead);
+} else if (args[0] === "list") {
   const response = readContacts(args[1]);
   console.log(response);
 } else if (args[0] === "add") {

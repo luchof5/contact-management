@@ -2,6 +2,9 @@ import fs from "node:fs";
 import { randomUUID } from "node:crypto";
 
 const URL_FILE = "./data/contacts.json";
+const HELP = "./help.txt";
+
+const helpRead = fs.readFileSync(HELP, "utf8");
 
 // Lee los contactos
 const readContacts = (favorit) => {
@@ -69,4 +72,4 @@ const deleteContact = (id) => {
   return foundContact;
 };
 
-export { readContacts, addContact, deleteContact };
+export { helpRead, readContacts, addContact, deleteContact };
