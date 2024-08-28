@@ -2,13 +2,22 @@
     {
         "id": "8ae34e47-4c85-4f8a-8dc2-0531820cd1f5",
         "nombre": "lucho",
-        "telfono": "123456789",
-        "email": "lucho@lucho.com"
+        "telfono": 123456789,
+        "email": "lucho@lucho.com",
+        "favorito": true
     },
     {
         "id": "f3eda6bc-8191-4c4b-ac7c-ce73c54c6b36",
         "nombre": "luis",
-        "telfono": "234567890",
-        "email": "luis@luis.com"
+        "telfono": 234567890,
+        "email": "luis@luis.com",
+        "favorito": false
+    },
+    {
+        "id": "53f20df6-d438-4ba3-bd76-f81ca2ba590a",
+        "nombre": "luciano",
+        "telfono": 1234222289,
+        "email": "luciano@luciano.com",
+        "favorito": true
     }
 ]

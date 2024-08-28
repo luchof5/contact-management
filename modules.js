@@ -4,7 +4,7 @@ import { randomUUID } from "node:crypto";
 const URL_FILE = "./data/contacts.json";
 
 // Lee los contactos
-const readContacts = () => {
+const readContacts = (favorit) => {
   const exist = fs.existsSync(URL_FILE);
 
   if (!exist) {
@@ -12,31 +12,40 @@ const readContacts = () => {
     return [];
   }
 
-  const data = fs.readFileSync(URL_FILE);
-  return JSON.parse(data);
+  if (favorit === "favoritos") {
+    const data = fs.readFileSync(URL_FILE);
+    const dataFavorite = JSON.parse(data).filter(
+      (data) => data.favorito === true
+    );
+    return dataFavorite;
+  } else {
+    const data = fs.readFileSync(URL_FILE);
+    return JSON.parse(data);
+  }
 };
 
 // Agrega contactos
-const addContact = (name, ph, mail) => {
-  const num = Number(ph);
+const addContact = (name, phone, mail, favorit = "") => {
+  const num = Number(phone);
   if (name.length < 3 || isNaN(num) || !mail.includes("@")) {
     return "Dato incorrecto";
   }
 
   const contactsList = readContacts();
 
-  const constact = {
+  const contact = {
     id: randomUUID(),
     nombre: name,
-    telfono: ph,
+    telfono: num,
     email: mail,
+    favorito: favorit === "favoritos",
   };
 
-  contactsList.push(constact);
+  contactsList.push(contact);
 
   fs.writeFileSync(URL_FILE, JSON.stringify(contactsList));
 
-  return constact;
+  return contact;
 };
 
 // Elimina contacto

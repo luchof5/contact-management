@@ -3,10 +3,10 @@ import { readContacts, addContact, deleteContact } from "./modules.js";
 const args = process.argv.splice(2);
 
 if (args[0] === "list") {
-  const response = readContacts();
+  const response = readContacts(args[1]);
   console.log(response);
 } else if (args[0] === "add") {
-  const response = addContact(args[1], args[2], args[3]);
+  const response = addContact(args[1], args[2], args[3], args[4]);
   console.log(response);
 } else if (args[0] === "delete") {
   const response = deleteContact(args[1]);
