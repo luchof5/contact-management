@@ -26,8 +26,8 @@ const readContacts = (favorit) => {
 
 // Agrega contactos
 const addContact = (name, phone, mail, favorit = "") => {
-  const num = Number(phone);
-  if (name.length < 3 || isNaN(num) || !mail.includes("@")) {
+  const phoneNumber = Number(phone);
+  if (name.length < 3 || isNaN(phoneNumber) || !mail.includes("@")) {
     return "Dato incorrecto";
   }
 
@@ -36,7 +36,7 @@ const addContact = (name, phone, mail, favorit = "") => {
   const contact = {
     id: randomUUID(),
     nombre: name,
-    telfono: num,
+    telfono: phoneNumber,
     email: mail,
     favorito: favorit === "favoritos",
   };
